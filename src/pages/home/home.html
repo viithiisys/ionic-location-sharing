@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="nature">
+    <ion-title>Ionic Location Sharing</ion-title>
+  </ion-navbar>
+	<ion-item>
+		<ion-avatar item-start>
+			<img src="assets/img/place.png">
+		</ion-avatar>
+		<h2>Send your current location</h2>
+		<p>Accurate to 50 meters</p>
+	</ion-item>
+</ion-header>
+
+<ion-content padding>
+	<div #map id="map"></div>
+	<ion-list>
+		<ion-item *ngFor="let nearby of nearByList">
+			<ion-avatar item-start>
+				<img src="{{nearby.icon}}">
+			</ion-avatar>
+			<h2>{{nearby.name}}</h2>
+			<p>{{nearby.vicinity}}</p>
+		</ion-item>
+	</ion-list>
+
+
+</ion-content>
